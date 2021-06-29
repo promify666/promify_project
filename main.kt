@@ -1,18 +1,11 @@
-fun main() {
-   var str = "Good Food"
-   var reverse = str.reversed ()
-   println(reverse)
+fun main(args: Array<String>) {
+    println(evenSpaced(5, 7, 9))
 
 }
-fun main(args: Array<String>) {
-   for (i in 1..100){
-      when{
-         (i % 3 == 0 && i % 5 == 0) ->
-            println("FIZZBUZZ")
-         i % 3 == 0 -> println("Fizz")
-         i % 5 == 0 -> println("Buzz")
-         else -> println("$i")
-      }
-   }
+fun evenSpaced (a:Int, b:Int, c:Int):Boolean {
+    var firstDif: Int = a - b
+    var secondDif: Int = b - c
 
+    return firstDif == secondDif
+    println(evenSpaced(2,4,6))
 }
