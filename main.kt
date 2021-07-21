@@ -1,11 +1,12 @@
-fun main(args: Array<String>) {
-    println(evenSpaced(5, 7, 9))
+fun main() {
+    println(reverseArray(arrayListOf(32,5,78,45,3,9)))
 
 }
-fun evenSpaced (a:Int, b:Int, c:Int):Boolean {
-    var firstDif: Int = a - b
-    var secondDif: Int = b - c
-
-    return firstDif == secondDif
-    println(evenSpaced(2,4,6))
+fun reverseArray(myNums: ArrayList<Int>): ArrayList<Int>{
+    var final = arrayListOf<Int>()
+    for (i in myNums.indices) {
+        val nums = myNums[myNums.size -1 -i]
+        final.add(nums)
+    }
+    return  final
 }
